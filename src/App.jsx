@@ -29,7 +29,7 @@ const shellSections = [
 const careerGroups = {
   'Software development': [
     'Computer Application Programmer', 'Database Programmer', 'Software Developer',
-    'Software Tester', 'System Programmer', 'System Analysts Assistant',
+    'Database Administrator', 'Software Tester', 'System Programmer', 'System Analysts Assistant',
   ],
   'Web technology': ['Internet Programmer', 'Web Programmer', 'Web Designer', 'Web Developer'],
   Networking: [
@@ -292,7 +292,7 @@ function App() {
           <section className="content-section careers-section" id="careers" aria-labelledby="careers-heading">
             <div className="section-heading-row">
               <div><p className="section-label">03 / Career pathways</p><h2 id="careers-heading">Where can DIT take you?</h2></div>
-              <p className="section-intro">The programme provides knowledge and skills that can be applied across ICT industries and businesses.</p>
+              <p className="section-intro">This programme provides knowledge and skills in the field of Information Technology which can be applied for careers in the related field. Thus, graduates from this programme are equipped with the knowledge, skills, attitude and abilities that can be applied to a broad range of careers in the ICT industrial worlds and businesses. The knowledge and skills that the students acquire from the programme will enable them to participate in the job market such as:</p>
             </div>
             <div className="career-explorer">
               <div className="career-tabs" role="tablist" aria-label="Career categories">
