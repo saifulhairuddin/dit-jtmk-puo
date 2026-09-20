@@ -46,7 +46,7 @@
 
 ## Blockers
 
-- Ship proof complete: GitHub commit `842e664` is pushed to `origin/master`; Vercel deployment is live at `https://dit-jtmk-puo.vercel.app`.
+- Ship proof complete: GitHub commit `06c0bb3` is pushed to `origin/master`; Vercel deployment is live at `https://dit-jtmk-puo.vercel.app` with AIDIT Botpress Webchat integrated.
 
 ## Decisions made
 
