@@ -45,7 +45,7 @@ const careerGroups = {
 
 const directionItems = [
   ['direction-vision', 'DIR // 01', 'Vision', 'To be the Leading-Edge TVET Institution.'],
-  ['direction-mission', 'DIR // 02', 'Mission', 'To provide wide access to quality and recognized TVET programs; to empower communities through lifelong learning; to develop holistic, entrepreneurial and balanced graduates; and to capitalise on smart partnership with stakeholders.'],
+  ['direction-mission', 'DIR // 02', 'Mission', 'a. To provide wide access to quality and recognized TVET programs\nb. To empower communities through lifelong learning\nc. To develop holistic, entrepreneurial and balanced graduates\nd. To capitalise on smart partnership with stakeholders'],
   ['educational-goal', 'DIR // 03', 'Educational Goal', 'To produce holistic and competent TVET graduates capable of contributing to the national development.'],
   ['programme-aim', 'DIR // 04', 'Programme Aim', 'The programme believes that every individual has potential to foster adaptable and responsible Information and Communication Technology (ICT) Assistant with new technological advancement in supporting the national digital initiative transformation agenda.'],
 ];
