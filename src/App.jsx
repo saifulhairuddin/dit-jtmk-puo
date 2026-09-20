@@ -166,6 +166,14 @@ const leadership = [
   ['Head of Programme · IS', 'Azrahayu binti Abdul Aziz', 'Information Security', 'aazrahayu@puo.edu.my'],
 ];
 
+const industryAdvisors = [
+  ['CEO@POLYCC', 'Ts. Hj. Muhammad Ibrahim bin Hussain', 'Sigma Rectrix Systems (M) Sdn. Bhd.'],
+  ['Industry Advisory Council (IAC)', 'Chan Chuey Hwye', 'Malaysia Digital Economy Corporation (MDEC)'],
+  ['IAP · Software & Application Development Track', 'Ts. Arham Zulqarnaen bin Shamsudin', 'Favotech System Sdn. Bhd.'],
+  ['IAP · Networking System Track', 'Mohamad Khairul Azam bin Ibrar Ahmad', 'Rapide Telecom Sdn. Bhd.'],
+  ['IAP · Information Security Track', 'Nor’Azuwa binti Muhamad Pahri', 'ASK Pentest Sdn. Bhd.'],
+];
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('introduction');
@@ -340,6 +348,11 @@ function App() {
           {shellSections.filter(([id]) => !['introduction', 'synopsis', 'careers', 'direction', 'peo', 'plo', 'curriculum'].includes(id)).map(([id, number, label]) => (
             id === 'tracks' ? <section className="content-section tracks-section" id={id} key={id} aria-labelledby="tracks-heading"><div className="section-heading-row"><div><p className="section-label">08 / Specialisation</p><h2 id="tracks-heading">Choose your technology track.</h2></div><p className="section-intro">Three specialised pathways. One strong IT foundation.</p></div><div className="track-grid">{trackOptions.map(([code, title], index) => <article className={`track-card${activeTrack === code ? ' is-selected' : ''}`} key={code}><div><p className="card-code">TRACK // {String(index + 1).padStart(2, '0')}</p><span className="track-code">{code}</span><h3>{title}</h3></div><ul>{trackFocus[code].map((subject) => <li key={subject}>{subject}</li>)}</ul><button type="button" onClick={() => { setActiveTrack(code); document.getElementById('curriculum')?.scrollIntoView({ behavior: 'smooth' }); }}>Explore track <span aria-hidden="true">→</span></button></article>)}</div></section> : id === 'leadership' ? <section className="content-section leadership-section" id={id} key={id} aria-labelledby="leadership-heading"><div className="section-heading-row"><div><p className="section-label">09 / Leadership</p><h2 id="leadership-heading">Programme leadership.</h2></div><p className="section-intro">Confirmed programme contacts for the Department of Information and Communication Technology.</p></div><div className="leadership-grid">{leadership.map(([role, name, area, email]) => <article className="leader-card" key={email}><p className="card-code">{role}</p><h3>{name}</h3><p>{area}</p><a href={`mailto:${email}`}>{email} ↗</a></article>)}</div></section> : id === 'academic-team' ? <section className="content-section team-section" id={id} key={id} aria-labelledby="team-heading"><div className="section-heading-row"><div><p className="section-label">10 / Academic team</p><h2 id="team-heading">Meet the people behind DIT.</h2></div><p className="section-intro">Search the confirmed academic directory by name, email, or track.</p></div><div className="team-tools"><div className="team-filters" role="tablist" aria-label="Academic team filter">{['ALL', 'SAD', 'NS', 'IS'].map((filter) => <button type="button" role="tab" aria-selected={teamFilter === filter} className={teamFilter === filter ? 'is-active' : ''} key={filter} onClick={() => setTeamFilter(filter)}>{filter}</button>)}</div><label className="team-search"><span className="sr-only">Search academic team</span><input value={teamQuery} onChange={(event) => setTeamQuery(event.target.value)} placeholder="Search academic team..." /></label></div><div className="team-grid">{lecturers.filter(([name, email, track]) => { const haystack = `${name} ${email} ${track}`.toLowerCase(); return (teamFilter === 'ALL' || track === teamFilter) && haystack.includes(teamQuery.toLowerCase()); }).map(([name, email, track]) => <article className="leader-card team-card" key={`team-${email}`}><p className="card-code">STAFF // {track}</p><h3>{name}</h3><p>{trackOptions.find(([code]) => code === track)?.[1]}</p><a href={`mailto:${email}`}>{email} ↗</a><span className="team-role">{track}</span></article>)}</div></section> : <section className="placeholder-section" id={id} key={id} aria-labelledby={`${id}-heading`}><p className="section-label">{number} / {label}</p><h2 id={`${id}-heading`}>{label}</h2><p className="placeholder-copy">Programme content arrives in the next implementation card.</p></section>
           ))}
+
+          <section className="content-section industry-section" id="industry-advisors" aria-labelledby="industry-heading">
+            <div className="section-heading-row"><div><p className="section-label">11 / Industry Advisory</p><h2 id="industry-heading">Connected to industry.</h2></div><p className="section-intro">Official programme contacts supporting TVET relevance and industry alignment.</p></div>
+            <div className="industry-grid">{industryAdvisors.map(([role, name, organisation]) => <article className="industry-card" key={name}><p className="card-code">{role}</p><h3>{name}</h3><p>{organisation}</p></article>)}</div>
+          </section>
 
           <section className="final-cta" aria-labelledby="final-cta-heading">
             <p className="section-label">DIT // JTMK.PUO</p>

@@ -953,6 +953,33 @@ h1 {
   scroll-margin-top: 5rem;
 }
 
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--color-border);
+}
+
+.industry-card {
+  min-height: 13rem;
+  padding: 1.25rem;
+  background: var(--color-panel);
+}
+
+.industry-card h3 {
+  margin: 2.5rem 0 1rem;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.industry-card p:last-child {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .final-cta h2 {
   max-width: 8ch;
   margin: 0;
@@ -1210,6 +1237,10 @@ h1 {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
@@ -1319,6 +1350,10 @@ h1 {
 
   .leadership-grid,
   .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-grid {
     grid-template-columns: 1fr;
   }
 }
