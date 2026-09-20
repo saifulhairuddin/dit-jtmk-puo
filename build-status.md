@@ -46,7 +46,7 @@
 
 ## Blockers
 
-- Ship proof complete: GitHub commit `2721b29` is pushed to `origin/master`; Vercel deployment is live at `https://dit-jtmk-puo.vercel.app`.
+- Ship proof complete: GitHub commit `e39eb5c` is pushed to `origin/master`; Vercel deployment is live at `https://dit-jtmk-puo.vercel.app`.
 
 ## Decisions made
 
