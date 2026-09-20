@@ -832,17 +832,6 @@ h1 {
   background: var(--color-border);
 }
 
-.leadership-section::before {
-  display: block;
-  margin-bottom: 1rem;
-  color: var(--color-accent);
-  content: "Official Programme Contacts for the Department of Information and Communication Technology";
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .leader-card {
   min-height: 18rem;
   padding: 1.25rem;
