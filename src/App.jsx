@@ -3,14 +3,17 @@ import lecturers from './data/lecturers.js';
 import { APPLY_URL, ENQUIRY_URL } from './config/externalUrls.js';
 
 const navigation = [
-  ['introduction', 'Introduction'],
-  ['synopsis', 'Synopsis'],
-  ['careers', 'Job Prospects'],
-  ['direction', 'Vision & Mission'],
-  ['peo', 'PEO'],
-  ['plo', 'PLO'],
-  ['curriculum', 'Programme Structure'],
-  ['tracks', 'Tracks'],
+  ['introduction', '01 / Introduction'],
+  ['synopsis', '02 / Synopsis'],
+  ['careers', '03 / Career Pathways'],
+  ['direction', '04 / Direction'],
+  ['peo', '05 / PEO'],
+  ['plo', '06 / PLO'],
+  ['curriculum', '07 / Curriculum'],
+  ['tracks', '08 / Specialisation'],
+  ['leadership', '09 / Leadership'],
+  ['academic-team', '10 / Academic Team'],
+  ['industry-advisors', '11 / Industry Advisory'],
 ];
 
 const shellSections = [
@@ -24,6 +27,7 @@ const shellSections = [
   ['tracks', '08', 'Technology Tracks'],
   ['leadership', '09', 'Programme Leadership'],
   ['academic-team', '10', 'Academic Team'],
+  ['industry-advisors', '11', 'Industry Advisory'],
 ];
 
 const careerGroups = {
