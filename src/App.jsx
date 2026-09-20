@@ -281,8 +281,8 @@ function App() {
               <h2 id="synopsis-heading">Learn.<br />Build.<br />Adapt.</h2>
             </div>
             <div className="synopsis-body">
-              <p>This programme provides education and training in the Computing field with a specific emphasis on Information Technology. It gives students opportunities to enter a broad range of ICT careers and develops transferable skills and multiskilling so they can adapt to new technologies.</p>
-              <p>Alongside technical courses, students develop soft skills through English for Digital Technology, ethics and civilisation, Pengajian Islam or Pendidikan Moral, and co-curriculum. Self-initiated learning and hands-on competencies prepare graduates for the challenges of computing technologies.</p>
+              <p>This programme provides education and training in Computing field with a specific emphasis on Information Technology area. The courses provide opportunities for students to get into a broad range of careers in a variety of ICT sectors. This programme also provides the students with transferable skills and multiskilling which enable them to adapt to new technologies.</p>
+              <p>In addition to the technical courses, students are also taught English for Digital Technology, Penghayatan Etika dan Peradaban, Pengajian Islam or Pendidikan Moral and Co-Curriculum, to enhance their competencies in soft skills. As the programme emphasizes self-initiated learning and hands-on competencies, graduates of this programme should be ready to take the challenges in the world of computing technologies.</p>
               <div className="keyword-grid" aria-label="Programme learning themes">
                 {['Information Technology', 'Computing', 'Hands-on competencies', 'Transferable skills', 'Multiskilling', 'Self-initiated learning'].map((keyword) => <span key={keyword}>{keyword}</span>)}
               </div>
