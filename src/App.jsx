@@ -306,7 +306,7 @@ function App() {
           </section>
 
           <section className="content-section outcome-section" id="peo" aria-labelledby="peo-heading">
-            <div className="section-heading-row"><div><p className="section-label">05 / PEO</p><h2 id="peo-heading">Who our graduates become.</h2></div><p className="section-intro">Four programme educational objectives describe the professional foundation graduates are prepared to build.</p></div>
+            <div className="section-heading-row"><div><p className="section-label">05 / PEO</p><h2 id="peo-heading">Who our graduates become.</h2></div><p className="section-intro">The Diploma in Information Technology programme shall produce semi-professionals ICT practitioners who are capable to be:</p></div>
             <div className="outcome-grid">{peos.map(([id, title, statement]) => { const expanded = expandedPeo === id; return <article className={`outcome-card${expanded ? ' is-expanded' : ''}`} key={id}><button type="button" aria-expanded={expanded} aria-controls={`${id}-statement`} onClick={() => setExpandedPeo(expanded ? null : id)}><span>{id}</span><strong>{title}</strong><b aria-hidden="true">{expanded ? '−' : '+'}</b></button><div id={`${id}-statement`} className="outcome-statement" hidden={!expanded}><p>{statement}</p></div></article>; })}</div>
           </section>
 
