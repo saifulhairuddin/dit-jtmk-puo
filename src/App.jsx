@@ -311,7 +311,7 @@ function App() {
           </section>
 
           <section className="content-section outcome-section" id="plo" aria-labelledby="plo-heading">
-            <div className="section-heading-row"><div><p className="section-label">06 / PLO</p><h2 id="plo-heading">11 outcomes.<br />One foundation.</h2></div><p className="section-intro">Upon completion of the programme, students should be able to demonstrate these learning outcomes.</p></div>
+            <div className="section-heading-row"><div><p className="section-label">06 / PLO</p><h2 id="plo-heading">11 outcomes.<br />One foundation.</h2></div><p className="section-intro">Upon completion of the programme, students should be able to:</p></div>
             <div className="plo-grid">{plos.map(([id, title, statement]) => { const expanded = expandedPlo === id; return <article className={`outcome-card plo-card${expanded ? ' is-expanded' : ''}`} key={id}><button type="button" aria-expanded={expanded} aria-controls={`${id}-statement`} onClick={() => setExpandedPlo(expanded ? null : id)}><span>{id}</span><strong>{title}</strong><b aria-hidden="true">{expanded ? '−' : '+'}</b></button><div id={`${id}-statement`} className="outcome-statement" hidden={!expanded}><p>{statement}</p></div></article>; })}</div>
           </section>
 
