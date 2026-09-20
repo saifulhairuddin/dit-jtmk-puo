@@ -27,25 +27,20 @@ const shellSections = [
 ];
 
 const careerGroups = {
-  'Software development': [
+  'SAD': [
     'Computer Application Programmer', 'Database Programmer', 'Software Developer',
-    'Database Administrator', 'Software Tester', 'System Programmer', 'System Analysts Assistant',
+    'Internet Programmer', 'Web Programmer', 'System Analysts Assistant',
+    'Database Administrator', 'Software Tester', 'System Support Personnel',
+    'Technical Helpdesk / Support', 'System Programmer', 'Web Designer', 'Web Developer',
   ],
-  'Web technology': ['Internet Programmer', 'Web Programmer', 'Web Designer', 'Web Developer'],
-  Networking: [
-    'Network Support Personnel', 'Network Administrator', 'IT Supports Engineer',
-    'Assistant Network Engineer',
+  'NS': [
+    'System Support Personnel', 'Technical Helpdesk / Support', 'Network Support Personnel',
+    'Network Administrator', 'IT Supports Engineer', 'Assistant Network Engineer',
   ],
-  Cybersecurity: [
+  'IS': [
     'Assistant Security Analysis', 'Assistant Information Security Engineer',
     'Assistant Penetration Tester',
   ],
-  'Data & analytics': [
-    'Assistant Data Analysis', 'Assistant Data Scientist', 'Assistant Data Analyst',
-    'Business Intelligence Analyst', 'Junior Data Visualization', 'Junior Statistician',
-    'Junior Data Insights and Visualization',
-  ],
-  'IT support': ['System Support Personnel', 'Technical Helpdesk / Support'],
 };
 
 const directionItems = [
@@ -165,7 +160,7 @@ const leadership = [
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('introduction');
-  const [activeCareer, setActiveCareer] = useState('Software development');
+  const [activeCareer, setActiveCareer] = useState('SAD');
   const [expandedPeo, setExpandedPeo] = useState(null);
   const [expandedPlo, setExpandedPlo] = useState(null);
   const [activeTrack, setActiveTrack] = useState('SAD');
