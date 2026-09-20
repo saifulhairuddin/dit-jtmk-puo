@@ -237,7 +237,6 @@ function App() {
             </a>
           ))}
         </nav>
-        <span className="header-status">SYSTEM // ONLINE</span>
       </header>
 
       <main id="top">
@@ -379,7 +378,6 @@ function App() {
         <div className="footer-meta">
           <span>PROGRAMME // DIT</span>
           <span>TRACKS // 03</span>
-          <span>SYSTEM // ONLINE</span>
         </div>
       </footer>
     </div>
