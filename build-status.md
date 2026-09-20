@@ -46,7 +46,7 @@
 
 ## Blockers
 
-- GitHub/Vercel proof pending: local Git is initialized on `master` and `origin` is connected, but no commit or push exists yet.
+- Ship proof complete: GitHub commit `5776c87` is pushed to `origin/master`; Vercel deployment is live at `https://dit-jtmk-e9s963l29-saiful-hairuddin.vercel.app`.
 
 ## Decisions made
 
@@ -69,8 +69,8 @@
 - Vercel account: Ready
 - KrackedDevs account: Ready
 - Localhost: Ready at `http://127.0.0.1:5173/`
-- Build: All Work Cards complete; Review Mirror passed
+- Build: All Work Cards complete; Review Mirror passed; GitHub push and Vercel deployment complete
 
 ## Next instruction for AI
 
-Approve staging, committing, and pushing to `origin`, then deploy through Vercel. If publishing is blocked, record localhost proof instead. Do not invent deployment URLs.
+Ship proof complete. Verify the live Vercel URL and keep `build-status.md` as the source of truth for the shipped state.
