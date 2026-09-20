@@ -81,25 +81,33 @@ const semesterOptions = ['01', '02', '03', '04', '05', '06'];
 
 const commonCourses = {
   '01': [
-    ['Core Computing', 'DFC10353', 'Programming Fundamentals', 'L 02 · P 02 · T 00 · CR 03'],
+    ['Compulsory', 'MPU22153', 'English for Digital Technology', 'L 02 · P 00 · T 02 · CR 03'],
+    ['Compulsory', 'MPU24031', 'Sukan 1', 'L 00 · P 02 · T 00 · CR 01'],
+    ['Compulsory', 'MPU24041', 'Kelab/Persatuan 1', 'L 00 · P 02 · T 00 · CR 01'],
+    ['Compulsory', 'MPU24XX1', 'Unit Beruniform 1', 'L 00 · P 02 · T 00 · CR 01'],
+    ['Core Computing', 'DBM10143', 'Calculus and Algebra', 'L 02 · P 00 · T 02 · CR 03'],
     ['Core Computing', 'DFC10263', 'Computer Architecture', 'L 02 · P 02 · T 00 · CR 03'],
     ['Core Computing', 'DFC10273', 'Operating Systems', 'L 02 · P 02 · T 00 · CR 03'],
-    ['Core Computing', 'DBM10143', 'Calculus and Algebra', 'L 02 · P 00 · T 02 · CR 03'],
-    ['Compulsory', 'MPU22153', 'English for Digital Technology', 'L 02 · P 00 · T 02 · CR 03'],
+    ['Core Computing', 'DFC10353', 'Programming Fundamentals', 'L 02 · P 02 · T 00 · CR 03'],
   ],
   '02': [
+    ['Compulsory', 'MPU23162', 'Pengajian Islam', 'L 01 · P 00 · T 02 · CR 02'],
+    ['Compulsory', 'MPU23272', 'Pendidikan Moral', 'L 01 · P 00 · T 02 · CR 02'],
+    ['Compulsory', 'MPU24051', 'Sukan 2', 'L 00 · P 02 · T 00 · CR 01', 'MPU24031'],
+    ['Compulsory', 'MPU24061', 'Kelab/Persatuan 2', 'L 00 · P 02 · T 00 · CR 01', 'MPU24041'],
+    ['Compulsory', 'MPU24XX2', 'Unit Beruniform 2', 'L 00 · P 02 · T 00 · CR 01', 'MPU24XX1'],
+    ['Core Computing', 'DBM20153', 'Discrete Mathematics', 'L 02 · P 00 · T 02 · CR 03'],
     ['Core Computing', 'DFC20283', 'Database Fundamentals', 'L 02 · P 02 · T 00 · CR 03'],
     ['Core Computing', 'DFC20293', 'Network and Data Communication', 'L 02 · P 03 · T 00 · CR 03'],
     ['Core Computing', 'DFC20313', 'Cybersecurity Fundamentals', 'L 02 · P 03 · T 00 · CR 03'],
     ['Discipline Core', 'DFK20013', 'Web Design Technology', 'L 02 · P 03 · T 00 · CR 03'],
-    ['Core Computing', 'DBM20153', 'Discrete Mathematics', 'L 02 · P 00 · T 02 · CR 03'],
   ],
   '03': [
     ['Core Computing', 'DBM30263', 'Statistics and Probability', 'L 02 · P 02 · T 00 · CR 03'],
     ['Core Computing', 'DFC30333', 'Ethics in Computing', 'L 02 · P 03 · T 00 · CR 03'],
     ['Discipline Core', 'DFK30023', 'User Experience Fundamentals', 'L 02 · P 03 · T 00 · CR 03'],
     ['Discipline Core', 'DFK30033', 'Cyberpreneurship', 'L 02 · P 03 · T 00 · CR 03'],
-    ['Discipline Core', 'DFK30053', 'Object Oriented Programming', 'L 02 · P 03 · T 00 · CR 03'],
+    ['Discipline Core', 'DFK30053', 'Object Oriented Programming', 'L 02 · P 03 · T 00 · CR 03', 'DFC10353'],
   ],
   '04': [
     ['Core Computing', 'DFC40343', 'System Analysis and Design Fundamentals', 'L 02 · P 02 · T 00 · CR 03'],
@@ -107,11 +115,12 @@ const commonCourses = {
     ['Discipline Core', 'DFK40073', 'Cloud Computing', 'L 02 · P 03 · T 00 · CR 03'],
   ],
   '05': [
+    ['Compulsory', 'MPU21072', 'Penghayatan Etika dan Peradaban', 'L 01 · P 00 · T 02 · CR 02'],
+    ['Compulsory', 'MPU22071', 'Kursus Integriti dan Anti Rasuah (KIAR)', 'L 00 · P 00 · T 02 · CR 01'],
     ['Discipline Core', 'DFK50083', 'Python Programming', 'L 02 · P 03 · T 00 · CR 03'],
     ['Discipline Core', 'DFK50093', 'Computer Network Security', 'L 02 · P 03 · T 00 · CR 03'],
-    ['Compulsory', 'MPU21072', 'Penghayatan Etika dan Peradaban', 'L 01 · P 00 · T 02 · CR 02'],
   ],
-  '06': [['Industrial Training', 'DUT60089', 'Industrial Training', 'L 00 · P 00 · T 00 · CR 09']],
+  '06': [],
 };
 
 const trackElectives = {
@@ -323,8 +332,8 @@ function App() {
             </div>
             <div className="curriculum-summary"><span>{activeTrack} // {trackOptions.find(([code]) => code === activeTrack)?.[1]}</span><strong>SEMESTER {activeSemester}</strong></div>
             <div className="course-grid">{[...(commonCourses[activeSemester] || []), ...(trackElectives[activeTrack]?.[activeSemester] || [])].map(([classification, code, name, hours, prerequisite]) => <article className="course-card" key={code}><p className="card-code">{classification}</p><p className="course-code">{code}</p><h3>{name}</h3><p className="course-hours">{hours}</p>{prerequisite && <p className="course-prerequisite">Prerequisite: {prerequisite}</p>}</article>)}</div>
-            {activeSemester === '05' && <article className="special-course project-course"><div><p className="section-label">SEM // 05 · PROJECT</p><p className="course-code">DFT50194</p><h3>Integrated Project</h3></div><div><strong>04 CREDITS</strong><p>Prerequisite: all core computing courses</p></div></article>}
-            {activeSemester === '06' && <article className="special-course training-course"><div><p className="section-label">SEM // 06</p><p className="course-code">DUT60089</p><h3>Industrial<br />Training</h3></div><div><strong>09 CREDITS</strong><p>Industry experience // transition to practice</p></div></article>}
+            {activeSemester === '05' && <article className="special-course project-course"><div><p className="section-label">SEM // 05 · PROJECT</p><p className="course-code">DFT50194</p><h3>Integrated Project</h3></div><div><strong>04 CREDITS</strong><p>L 02 · P 03 · T 00</p><p>Prerequisite: all core computing courses</p></div></article>}
+            {activeSemester === '06' && <article className="special-course training-course"><div><p className="section-label">SEM // 06</p><p className="course-code">DUT60089</p><h3>Industrial<br />Training</h3></div><div><strong>09 CREDITS</strong><p>L 00 · P 00 · T 00</p><p>Industry experience // transition to practice</p></div></article>}
           </section>
 
           {shellSections.filter(([id]) => !['introduction', 'synopsis', 'careers', 'direction', 'peo', 'plo', 'curriculum'].includes(id)).map(([id, number, label]) => (
