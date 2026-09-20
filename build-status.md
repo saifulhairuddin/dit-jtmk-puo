@@ -46,7 +46,7 @@
 
 ## Blockers
 
-- GitHub commit `e3f89bd` is pushed to `origin/master`; Vercel redeployment is pending because existing Vercel authentication is not authorized. The last verified deployment is `https://dit-jtmk-puo.vercel.app`.
+- Ship proof complete: GitHub commit `2721b29` is pushed to `origin/master`; Vercel deployment is live at `https://dit-jtmk-puo.vercel.app`.
 
 ## Decisions made
 
@@ -69,8 +69,8 @@
 - Vercel account: Ready
 - KrackedDevs account: Ready
 - Localhost: Ready at `http://127.0.0.1:5173/`
-- Build: All Work Cards complete; Review Mirror passed; latest career mapping pushed to GitHub; Vercel redeployment blocked by authentication
+- Build: All Work Cards complete; Review Mirror passed; Direction statements updated and deployed
 
 ## Next instruction for AI
 
-Reauthorize Vercel and redeploy the latest GitHub commit. Keep `build-status.md` as the source of truth for the shipped state.
+Ship proof complete. Keep `build-status.md` as the source of truth for the shipped state.
