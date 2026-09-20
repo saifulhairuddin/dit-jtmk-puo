@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import lecturers from './data/lecturers.js';
 import { APPLY_URL, ENQUIRY_URL } from './config/externalUrls.js';
+import BotpressChat from './components/BotpressChat.jsx';
 
 const navigation = [
   ['introduction', '01 / Introduction'],
@@ -207,6 +208,7 @@ function App() {
 
   return (
     <div className="site-shell">
+      <BotpressChat />
       <header className="site-header">
         <a className="wordmark" href="#top" onClick={closeMenu}>
           DIT <span>//</span> JTMK.PUO
