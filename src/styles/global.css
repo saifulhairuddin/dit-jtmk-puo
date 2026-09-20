@@ -1320,6 +1320,11 @@ h1 {
   .control-row {
     overflow-x: auto;
     justify-content: flex-start;
+    min-width: 0;
+  }
+
+  .curriculum-controls > div {
+    min-width: 0;
   }
 
   .control-row button {
